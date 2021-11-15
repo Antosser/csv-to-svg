@@ -9,9 +9,15 @@ Converts Csv (Comma Seperated Values) file to Svg (Scalable Vector Graphics)
 1. Wait a few second and have your file downloaded right away
 1. Open the file in Adobe Illustrator, Chrome ect.
 
+<!--
 ## Options
-### Ignore first row
 Header 1 | Header 2
 --- | ---
 Data 1 | Data 2
-Date 3 | Data 4
+Data 3 | Data 4
+
+### Ignore first row
+"Header 1" and "Header 2" will be ignored
+### Ignore columns
+Example 1
+-->
