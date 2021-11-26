@@ -23,7 +23,7 @@
 			});
 			console.log(lines);
 			let max = 0;
-			for (let i = 0; i < lines.length; i++)
+			for (let i = ignoredcolumns ? 1 : 0; i < lines.length; i++)
 				for (let j = 0; j < lines[i].length; j++)
 					if (parseInt(lines[i][j]) > max && !ignoredcolumns.includes(j))
 						max = parseInt(lines[i][j]);
@@ -35,7 +35,7 @@
 				if (ignoredcolumns.includes(i))
 					continue;
 				svg += '<polyline stroke="red" stroke-width="1" fill="none" points="';
-				for (let j = 0; j < ydim; j += ydim >= 10000 ? parseInt(ydim / 10000) : 1) {
+				for (let j = ignoredcolumns ? 1 : 0; j < ydim; j += ydim >= 10000 ? parseInt(ydim / 10000) : 1) {
 					svg += j / lines.length * 1600;
 					svg += ",";
 					svg += 800 - parseInt(lines[j][i]) / max * 800;
